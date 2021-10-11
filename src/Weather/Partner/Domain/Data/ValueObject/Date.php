@@ -25,7 +25,7 @@ final class Date extends CarbonImmutable
         $isToFarInFuture = Carbon::now()->addDays(self::MAX_DAYS_DIFFERENCE)->lt($date);
 
         if ($isInPast || $isToFarInFuture) {
-            throw new \InvalidArgumentException("Date is past or out of range");
+            throw new \InvalidArgumentException("Date in the past or out of range");
         }
     }
 }

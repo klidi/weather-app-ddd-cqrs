@@ -8,7 +8,7 @@ use App\Shared\Domain\Bus\Query\Response;
 
 class PredictionsResponse implements Response
 {
-    private array $predictions;
+    private array $predictions = [];
 
     public function predictions() : array
     {
