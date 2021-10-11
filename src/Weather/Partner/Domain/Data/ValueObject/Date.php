@@ -7,23 +7,25 @@ namespace App\Weather\Partner\Domain\Data\ValueObject;
 use Carbon\Carbon;
 use Carbon\CarbonImmutable;
 
-final class Date extends \Carbon\CarbonImmutable
+final class Date extends CarbonImmutable
 {
-    private const START_END_MAX_DAYS_DIFFERENCE = 10;
+    private const MAX_DAYS_DIFFERENCE = 10;
 
-    public function __construct($time = null, $tz = null)
+    public static function parse($time = null, $tz = null): Date
     {
-        $this->validate();
-        parent::__construct($time, $tz);
+        $date = parent::parse($time);
+        self::validate($date);
+
+        return $date;
     }
 
-    private function validate() : void
+    public static function validate(CarbonImmutable $date) : void
     {
-        $isInPast = Carbon::now()->startOfDay()->gte($this);
-        $isToFar = Carbon::now()->addDays(self::START_END_MAX_DAYS_DIFFERENCE)->lt($this);
+        $isInPast = Carbon::now()->startOfDay()->gte($date);
+        $isToFarInFuture = Carbon::now()->addDays(self::MAX_DAYS_DIFFERENCE)->lt($date);
 
-        if ($isInPast || $isToFar) {
-            // @TODO throw exception
+        if ($isInPast || $isToFarInFuture) {
+            throw new \InvalidArgumentException("Date is past or out of range");
         }
     }
 }

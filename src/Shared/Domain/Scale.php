@@ -18,7 +18,7 @@ final class Scale
     public function __construct(private string $value)
     {
         if (!\in_array($this->value, self::VALUES)) {
-            // TODO throw exception
+            throw new \InvalidArgumentException("Unsupported scale");
         }
     }
 

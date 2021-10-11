@@ -23,18 +23,14 @@ final class PredictionsSearchController extends ApiController
 
         /** @var PredictionsResponse $response */
         $response = $this->ask(new SearchPredictionsQuery($city, $date, $scale));
+        $data = map(fn(PredictionResponse $prediction) => [
+                $prediction->city() => map(fn(PredictionItemResponse $item) => [
+                    $item->value(),
+                    $item->time(),
+                ], $prediction->items())
+            ], $response->predictions()) ?: [$city => []];
 
-        return new JsonResponse(map(
-            fn(PredictionResponse $prediction) => [
-                    $prediction->city() => map(fn(PredictionItemResponse $item) => [
-                        $item->value(),
-                        $item->time(),
-                    ], $prediction->items())
-                ],
-                $response->predictions()
-            ),
-            200,
-            ['Access-Control-Allow-Origin' => '*']);
+        return new JsonResponse($data, 200, ['Access-Control-Allow-Origin' => '*']);
     }
 
     protected function exceptions(): array

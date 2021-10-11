@@ -4,7 +4,7 @@ namespace App\Weather\Partner\Application;
 
 class PredictionResponse
 {
-    private array $items;
+    private array $items = [];
 
     public function __construct(
         private string $city,

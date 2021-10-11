@@ -75,7 +75,7 @@ final class PartnerFactory
         $predictions->append(new Prediction(
             new Scale($scale),
             new City($city),
-            Date::parse($date),
+            CarbonImmutable::parse($date),
             $predictionItems
         ));
 
