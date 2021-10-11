@@ -1,0 +1,4 @@
+predictions:
+  path: /api/predictions
+  controller:  App\Weather\Partner\Presentation\Http\Controller\PredictionsSearchController
+  methods: [GET]
