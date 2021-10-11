@@ -14,7 +14,7 @@ I have aimed for clean readable code, well enforced and encapsulated invariants 
 #The extra mile
 - No test, sorry I have spent a lot of time with the project
 - Yes there is one extra diagram
-- Sorry, I have spent a lot of time with this already
+- Sorry its not hosted, I have spent a lot of time with this already
 
 #ToDo or improve if I had more time
 - Add Docker
