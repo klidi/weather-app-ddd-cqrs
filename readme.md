@@ -7,7 +7,7 @@ the companies I worked for and please consider this as my first attempt at "prop
 
 I have included one bounded context diagram and the diagram for the class relationship.
 
-The code inside src\Weather\Partners\Shared is mostly copy and paste code to lay the foundation for using 
+The code inside src/Weather/Partners/Shared is mostly copy and paste code to lay the foundation for using 
 commands and queries. The rest is code written the past few days for this task.
 I have aimed for clean readable code, well enforced and encapsulated invariants and less for designing and Api.
 
