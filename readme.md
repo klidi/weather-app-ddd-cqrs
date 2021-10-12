@@ -11,12 +11,12 @@ The code inside sec\Weather\Partners\Shared is mostly copy and paste code to lay
 commands and queries. The rest is code written the past few days for this task.
 I have aimed for clean readable code, well enforced and encapsulated invariants and less for designing and Api.
 
-#The extra mile
+# The extra mile
 - No test, sorry I have spent a lot of time with the project
 - Yes there is one extra diagram
 - Sorry its not hosted, I have spent a lot of time with this already
 
-#ToDo or improve if I had more time
+# ToDo or improve if I had more time
 - Add Docker
 - Add psalm
 - Add CS
@@ -31,7 +31,7 @@ this breaks the single responsibility principle, so a proxy would be perfect in 
 
 These are some things that come to my mind atm.
 
-#Testing
+# Testing
 - I am a unit test person and less an e2e person.
 e2e test can be covered with a variety of tools and not necessarily done by a dev.
 I would cover first all parts were logic seem more complicated, parts were code looks less robust and prone to break.
@@ -42,14 +42,14 @@ This would help prevent bugs in future and also improve the code exposed by the 
   I am not much of a QA guy, usually these are things you figure out with a QA engineer. 
   Come up with a plan and how to achieve it.
 
-#Specification
+# Specification
 - PHP 8
 - Symfony 5.3
 
 # How to run
 from root: php -S localhost:8080 -t public ;) (wink wink)
 
-#Api
+# Api
 /api/predictions?city=Amsterdam&date=12-10-2021&scale=celsius
 
 #Notes
