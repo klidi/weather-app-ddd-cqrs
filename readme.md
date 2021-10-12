@@ -24,7 +24,7 @@ I have aimed for clean readable code, well enforced and encapsulated invariants 
 - OpenApi docs  
 - ErrorHandler (Currently there is no way to return a json response in case of an exception)
 - Custom Exceptions (I have done only one or two due to time but definitely needed more)
-- Move parts of config at aggregates BC level
+- Move parts of config at BC level
 - Proxy Cache Repository for each partner. Currently, the cache is being handled by the same repository that fetches the data
 this breaks the single responsibility principle, so a proxy would be perfect in such case
 - Proper Criteria object and everything that comes with it to be able to search
