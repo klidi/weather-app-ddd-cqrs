@@ -7,7 +7,7 @@ the companies I worked for and please consider this as my first attempt at "prop
 
 I have included one bounded context diagram and the diagram for the class relationship.
 
-The code inside sec\Weather\Partners\Shared is mostly copy and paste code to lay the foundation for using 
+The code inside src\Weather\Partners\Shared is mostly copy and paste code to lay the foundation for using 
 commands and queries. The rest is code written the past few days for this task.
 I have aimed for clean readable code, well enforced and encapsulated invariants and less for designing and Api.
 
@@ -53,6 +53,6 @@ from root: php -S localhost:8080 -t public ;) (wink wink)
 /api/predictions?city=Amsterdam&date=12-10-2021&scale=celsius
 
 #Notes
-- Date is in the past in all data sources provided so plz inside Domain/Data/ValueObject/Date plz comment out the exception
-- The diagrams have been created before code was finished, so they are slightly different. U can find them in root forlder inside docs
+- Date is in the past in all data sources provided so plz inside Domain/Data/ValueObject/Date comment out the exception
+- The diagrams have been created before code was finished, so they are slightly different. U can find them in root folder inside docs
 - I have implemented only 2 out of 3 partners cuz again I have spent a lot of time on this.
