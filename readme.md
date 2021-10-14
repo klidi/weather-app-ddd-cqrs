@@ -28,6 +28,7 @@ I have aimed for clean readable code, well enforced and encapsulated invariants 
 - Proxy Cache Repository for each partner. Currently, the cache is being handled by the same repository that fetches the data
 this breaks the single responsibility principle, so a proxy would be perfect in such case
 - Proper Criteria object and everything that comes with it to be able to search
+- The Repository factory its just a workaround if i tried a bit more i could have done something smarter
 
 These are some things that come to my mind atm.
 
